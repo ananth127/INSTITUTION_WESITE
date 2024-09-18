@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styiegame.css"/>
+    <title>college | web</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        span {
+            font-size: 0.9rem;
+            align-items: center;
+            margin-left: 30px;
+        }
+        .clgname {
+            padding: 10px;
+            text-align: center;
+        }
+        .collegeweb {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .dept {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .feedback {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .feedback h3 {
+            font-size: 0.9rem;
+            padding-top: 2px;
+        }
+        button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: #00a2ff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="clgname">
+        <h2>VSB ENGINEERING COLLEGE, Karur<br><span>(An Autonomous Institution)</span></h2>
+    </div>
+    <div class="collegeweb">
+        <h3>College Website!</h3>
+        <a href="https://www.vsbec.com/"><button>Click here</button></a> 
+    </div>
+    <div class="dept">
+        <h3>IT Department Website! <img src="" alt=""></h3>
+        <a href="https://zoometric-crystal.000webhostapp.com/"><button>Click here</button></a> 
+    </div>
+    <div class="spacegame">
+        <h3>Space Game! <img src="" alt=""></h3>
+        <a href="https://zoometric-crystal.000webhostapp.com/spacegame.html"><button>Click here</button></a> 
+    </div>
+    <div class="utube">
+        <h3>IT Department YouTube Channel!</h3>
+        <a href="https://www.youtube.com/@VSBECIT"><button>Click here</button></a> 
+    </div>
+    <div class="feedback">
+        <h3>Kindly give your feedback to us!</h3>
+        <form id="rating-form">
+            <label for="rating">Rating:</label>
+            <input type="radio" id="rating1" name="rating" value="1">
+            <label for="rating1"><i class="fas fa-star"></i></label>
+            <input type="radio" id="rating2" name="rating" value="2">
+            <label for="rating2"><i class="fas fa-star"></i></label>
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3"><i class="fas fa-star"></i></label>
+            <input type="radio" id="rating4" name="rating" value="4">
+            <label for="rating4"><i class="fas fa-star"></i></label>
+            <input type="radio" id="rating5" name="rating" value="5">
+            <label for="rating5"><i class="fas fa-star"></i></label>
+            <br>
+            <button type="submit">Submit Rating</button>
+        </form>
+        <p id="rating-message"></p>
+    </div>
+    <script>
+        const ratingForm = document.getElementById("rating-form");
+        const ratingMessage = document.getElementById("rating-message");
+
+        ratingForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            // Get the value of the star rating input.
+            const rating = document.querySelector("input[name=rating]:checked").value;
+
+            // You can replace this with your actual rating submission logic.
+            // For now, we'll just display a message.
+            ratingMessage.textContent = "You rated " + rating + " stars.";
+        });
+    </script>
+</body>
+</html>

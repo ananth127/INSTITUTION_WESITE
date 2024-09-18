@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Staff NEW USER</title>
+
+    <script>
+		
+			
+        function checkPassword(form) {
+            password = form.password.value;
+            password1 = form.password1.value;
+
+            // If password not entered
+            if (password == ''){
+                alert ("Please enter Password");
+                return false;
+            }
+            // If confirm password not entered
+            else if (password1 == ''){
+                alert ("Please enter confirm password");
+                return false;}
+                
+            // If Not same return False.	
+            else if (password != password1) {
+                alert ("<h1>\nPassword did not match: Please try again...</h1>")
+                return false;
+            }
+
+            // If same return True.
+            
+        }
+    </script>
+</head>
+<div style="background-color:powderblue;">
+    <div class="fbt">
+        <h2><centre>New User</centre></h2>
+    </div>
+    <div class="fbb">
+        <h2>Sign Up To IT Dept.</h2>
+        <form onSubmit = "return checkPassword(this)" action="staffnew1.php" method="post">
+            <div>
+                <hr>
+                <label for="email ">Enter Pass ID:</label><br>
+                <input type="password" name="idno" placeholder="Enter PASS ID Here" required><br>
+                
+                <label for="email ">Enter Your ID :</label><br>
+                <input type="name" name="uname" placeholder="Entre ID Here" required><br>
+                <label>Enter New password :</label><br>
+                <input type="password" name="password" placeholder="Enter Password Here"><br>
+                <input type="password1" name="password1" placeholder="Confirm Password Here"><br>
+                <label >Enter Your Name :</label><br>
+                <input type="name" name="name" placeholder="Entre Name Here" required><br>
+                <label>Select your class :
+                    <select name="class" id="class">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                   
+                    <option value="HOD">HOD</option>
+                     <option value="ADMIN">ADMIN</option>
+                    </select>
+                </label><br>
+            </div>
+            
+            <button class="btnn">SUBMIT</button>
+        </form>
+        <br>
+    </div>
+</div>
+
+</html>

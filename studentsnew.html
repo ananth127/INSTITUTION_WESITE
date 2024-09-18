@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Student NEW USER</title>
+
+    <script>
+		
+			
+        function checkPassword(form) {
+            password = form.password.value;
+            password1 = form.password1.value;
+
+            // If password not entered
+            if (password == ''){
+                alert ("Please enter Password");
+                return false;
+            }
+            // If confirm password not entered
+            else if (password1 == ''){
+                alert ("Please enter confirm password");
+                return false;}
+                
+            // If Not same return False.	
+            else if (password != password1) {
+                alert ("\nPassword did not match: Please try again...")
+                return false;
+            }
+
+            // If same return True.
+            
+        }
+    </script>
+</head>
+<div style="background-color:powderblue;">
+    <div class="fbt">
+        <h2><centre>New User</centre></h2>
+    </div>
+    <div class="fbb">
+        <h2>Sign Up To IT Dept.</h2>
+        <form onSubmit = "return checkPassword(this)" action="studnew.php" method="post">
+            <div>
+                <hr><label for="email ">Enter Student ROLL NO:</label><br>
+                <input type="name" name="uname" placeholder="Enter ROLL No. Here"><br>
+                <label>Enter New password :</label><br>
+                <input type="password" name="password" placeholder="Enter Password Here"><br>
+                <label>Enter re-Enter password :</label><br>
+                <input type="password" name="password1" placeholder="Confirm Password Here"><hr>
+                <label>Enter Your Name : :</label><br>
+                <input type="name" name="name" placeholder="Entre NAME Here"><br>
+                <label for="Dept">Select your Department :
+                    <select name="dept" id="dept">
+                    <option value="IT">IT</option>
+                    <option value="CSE">CSE</option>
+                    
+                    <option value="AIDS">AIDS</option>
+                    </select>
+                </label>br
+                <label>Select your class :
+                    <select name="class" id="class">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    
+                    <option value="C">C</option>
+                    </select>
+                </label><br>
+                
+                <label>Enter  Mark:</label><br>
+                <input type="name" name="mark" placeholder="Entre Your Mark"><br>
+                <label>Enter  City:</label><br>
+                <input type="name" name="city" placeholder="Entre Your City"><br>
+                <label>Enter  BIRTHDAY:</label><br>
+                <input type="name" name="birthday" placeholder="Entre Your birthday 01-01-2001"><br><hr>
+            </div>
+            
+            <button class="btnn" >SUBMIT</button>
+        </form>
+        <br>
+    </div>
+</div>
+
+</html>

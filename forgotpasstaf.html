@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>FORGOT PASSWORD STAFF</title>
+
+    <script>
+		
+			
+        function checkPassword(form) {
+            password = form.password.value;
+            password1 = form.password1.value;
+
+            // If password not entered
+            if (password == ''){
+                alert ("Please enter Password");
+                return false;
+            }
+            // If confirm password not entered
+            else if (password1 == ''){
+                alert ("Please enter confirm password");
+                return false;}
+                
+            // If Not same return False.	
+            else if (password != password1) {
+                alert ("\nPassword did not match: Please try again...")
+                return false;
+            }
+
+            // If same return True.
+            
+        }
+    </script>
+</head>
+<body  style="background-color:powderblue;">
+<div class="bg">
+    <div class="fbt">
+        <h2><centre>FORGOT PASSWORD</centre></h2>
+    </div>
+    <div class="fbb">
+        <h2>Sign Up To IT Dept.</h2>
+        <form onSubmit = "return checkPassword(this)" action="forgotpasstaf.php" method="post">
+            <div>
+                <hr><label>Enter Your PASS KEY:</label><br>
+                <input type="password" name="idno" placeholder="Entre PASS KEY Here"><br>
+                <label>Enter STAFF ID.:</label><br>
+                <input type="name" name="uname" placeholder="Entre ROLL NO Here"><br>
+                <label>Enter New password :</label><br>
+                <input type="password" name="password" placeholder="Enter Password Here"><br>
+                <label>Enter re-Enter password :</label><br>
+                <input type="password" name="password1" placeholder="Confirm Password Here"><hr>
+            </div>
+            
+            <button class="btnn" >SUBMIT</button>
+        </form>
+        <br>
+    </div>
+</div>
+</body>
+
+</html>
